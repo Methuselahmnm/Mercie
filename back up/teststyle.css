@@ -1,0 +1,230 @@
+/* Base styling for small screens */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* Header Styles */
+#header {
+    height: max-content;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem 0;
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    box-shadow: 0px 6px 31px -2px rgba(0, 0, 0, 1);
+}
+
+.header-content-div {
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Styles */
+nav {
+    position: relative;
+    top: 2rem;
+    float: right;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1.5rem 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: hsl(0, 0%, 20%);
+    margin: 0 0.5rem;
+    padding: 0 0.6rem;
+    transition: border-bottom 0.2s;
+}
+
+.nav-link:hover {
+    color: hsl(0, 98%, 57%);
+    border-bottom: 2px solid hsl(0, 75%, 57%);
+}
+
+.nav-link:active {
+    color: hsl(0, 69%, 41%);
+}
+
+/* Section Styling */
+.home-sec {
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    text-align: start;
+    min-height: 60rem;
+    margin: 0 auto 5rem;
+    max-width: 95rem;
+    color: hsl(0, 0%, 20%);
+}
+
+.eye-grabber {
+    max-width: max-content;
+    padding: 0 2rem;
+}
+
+.eye-grabber h1 {
+    font-size: 5rem;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.eye-grabber h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 40%);
+}
+
+/* Buttons */
+.btn {
+    border: none;
+    font-size: 2rem;
+    border-radius: 0.4rem;
+    padding: 2rem;
+    background-color: hsl(16, 100%, 50%);
+    color: white;
+    box-shadow: 0 10px 20px black;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background-color: hsl(16, 94%, 38%);
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+/* Section Headings */
+.section-heading {
+    font-size: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+/* Tiles */
+.tile {
+    text-align: center;
+    display: inline-block;
+    width: 20%;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0 20px black;
+    border-radius: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tile:hover {
+    box-shadow: 0 0 40px hsl(0, 98%, 57%);
+    transform: scale(1.05);
+}
+
+.tile img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.tile h4 {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 2rem;
+}
+
+.tile p {
+    font-size: 1.6rem;
+    padding: 0 2rem 2rem;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: hsl(210, 36%, 22%);
+    color: hsl(0, 0%, 98%);
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.4rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+    #header {
+        text-align: left;
+        height: auto;
+    }
+    
+    nav {
+        position: static;
+        float: none;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .home-sec {
+        flex-flow: column wrap;
+        max-width: 100%;
+    }
+
+    .eye-grabber {
+        padding-bottom: 8rem;
+    }
+
+    .tile {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .header-content-div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        margin: 0.2rem;
+        padding: 0.2rem;
+    }
+
+    .eye-grabber h1 {
+        font-size: 2rem;
+    }
+
+    .eye-grabber h2 {
+        font-size: 1.2rem;
+    }
+
+    .tile {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .tile h4 {
+        font-size: 1.4rem;
+    }
+
+    .tile p {
+        font-size: 1.2rem;
+    }
+}
